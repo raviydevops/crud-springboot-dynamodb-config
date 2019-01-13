@@ -15,7 +15,7 @@ RUN apk add -u bash curl ca-certificates wget libgcc && \
 
 COPY Dockerfile /cnab/Dockerfile
 COPY app /cnab/app
-
+RUN chmod +x /cnab/app/run
 WORKDIR /cnab/app/crud-springboot-dynamodb
 
 CMD ["/cnab/app/run"]

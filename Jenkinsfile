@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage ('git-clone') {
             steps {
-                echo "Deploying to aws"
+                echo "Deploying to local and aws"
             }
         }
     }

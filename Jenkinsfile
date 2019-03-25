@@ -7,7 +7,7 @@ pipeline {
                 script {
                     def environmnetsToDeploy = ['local', 'local_and_aws', 'aws_cdk']
                     environmnetsToDeploy.each {
-                        build job: "config-multibranch-test/$it", propagate: true
+                        build job: "config-multibranch-test/$it", propagate: true, wait: true
                     }
                 }
             }

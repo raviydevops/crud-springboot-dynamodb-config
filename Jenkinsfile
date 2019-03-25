@@ -3,7 +3,8 @@ pipeline {
     stages {
         stage ('git-clone') {
             steps {
-                echo "Deploying to eternal from ephermersl..."
+                echo "Deploying to eternal from ephermeral..."
+                build 'config-multibranch-test'
             }
         }
     }
